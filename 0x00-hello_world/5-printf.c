@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - starting point of the program
+ * main - Entry point
  *
- * Description: prints a sample string
- * Return : if the program execute properly, else a non-xero number
+ * Description: ' prints a sample string'
+ *
+ * Return : always 0 (success) in main
  */
+
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a poece of art, \n");
+	printf("with proper grammar, but the outcome is a piece of art, \n");
 	return (0);
 }
