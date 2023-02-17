@@ -3,9 +3,8 @@
 /**
  * main - Entry point
  *
- * variable :
  * Description: print lowercase alphabet and higher case
- * Return: 0 always
+ * Return: Always 0
  */
 
 int main(void)
