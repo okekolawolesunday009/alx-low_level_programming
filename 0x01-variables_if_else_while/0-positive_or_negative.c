@@ -3,15 +3,12 @@
 #include <time.h>
 
 /**
- * main -  Entry point.
+ * main - Entry point
  *
- * variable : n is declared as int.
- * Description : program prints,
- * return value is zero, iff n is greater 0 output "is posituive",
- * else if n is 0 output "is zero ",
- * else if n is less than 0 "is negative".
- * Return : return main 0 (succes).
-*/
+ * Description: prints all possible different combinations of three digits.
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
@@ -25,5 +22,6 @@ int main(void)
 		printf("%d is zero\n", n);
 	else
 		printf("%d is negative\n", n);
+
 	return (0);
 }
