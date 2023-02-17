@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * variables : n as int
- * Descriptions : prints 0 to 9
+ * Description: prints 0 to 9
  * Return: always 0
  */
 
