@@ -1,19 +1,17 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 
-/*
- * main -  Entry point
+/**
+ * main -  Entry point.
  *
- * variable : n is declared as int
- * Description : program prints
- *		main function
- *		if n is greater 0 output "is posituive"
- *              else if n is 0 output "is zero "
- *              else if n is less than 0 "is negative"
- * Return : output returns 0 (success)
+ * variable : n is declared as int.
+ * Description : program prints,
+ * return value is zero, iff n is greater 0 output "is posituive",
+ * else if n is 0 output "is zero ",
+ * else if n is less than 0 "is negative".
+ * Return : return main 0 (succes).
 */
-
 int main(void)
 {
 	int n;
