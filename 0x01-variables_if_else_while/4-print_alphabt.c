@@ -3,9 +3,8 @@
 /*
  * main - Entry point
  *
- * variables
  * Description: prints all letters except q and e
- * Return : 0 always
+ * Return: Always 0
  */
 
 int main(void)
