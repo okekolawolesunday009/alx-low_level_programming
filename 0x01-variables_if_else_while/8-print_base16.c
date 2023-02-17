@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * variables :  and in as int
- * Description : prints 0 t 9 and hex a to f
- * Return : 0 always
+ * variables:  and in as int
+ * Description: prints 0 t 9 and hex a to f
+ * Return: Aalways 0
  */
 
 int main(void)
