@@ -7,7 +7,7 @@
  *
  * variables:n, l str
  * Description: prints the last digit and outs the coressponing printa
- * Return : 0 (always success)
+ * Return: 0 (always success)
  */
 
 int main(void)
