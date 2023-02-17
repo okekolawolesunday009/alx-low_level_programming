@@ -5,7 +5,7 @@
  *
  * Description: ' prints a sample string'
  *
- * Return : always 0 (success) in main
+ * Return: always 0 (success) in main
  */
 
 int main(void)
