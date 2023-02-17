@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry Point
  *
- * variables : ch as char
- * Description : prints a to z in reveres
- * Return : always 0
+ * variables: ch as char
+ * Description: prints a to z in reveres
+ * Return: Always 0
  */
 
 int main(void)
