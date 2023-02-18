@@ -10,8 +10,8 @@ int main(void)
 {
 
 	int n, z;
-	/*comment*/
-	for (n = 47; n <= 57; n++)
+	/**comment**/
+	for (n = 48; n <= 57; n++)
 	{
 		for (z = n + 1; z <= 57; z++)
 		{
