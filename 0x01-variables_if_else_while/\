@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: prints doub;e digit from 01 - 89
+ */
+
+int main(void)
+{
+
+	int n, z;
+
+	for (n = 0; n < 10; n++)
+	{
+		for (z = n + 1; z <= 9; z++)
+		{
+			putchar(n);
+			putchar(z);
+		}
+	}
+	return (0);
+}
