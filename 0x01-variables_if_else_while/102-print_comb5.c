@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	int n, z, y, p;
-
+	int p, y, z, n, p1, p2;
+	/**comment**/
 	for (n = 48; n <= 57; n++)
 	{
 		for (z = 48; z <= 56; z++)
@@ -18,14 +18,20 @@ int main(void)
 			{
 				for (p = 48; p <= 57; p++)
 				{
-					putchar(n);
-					putchar(z);
-					putchar(' ');
-					putchar(y);
-					putchar(p);
+					p1 = (n * 10) + z;
+					p2 = (y * 10) + p;
 
-					if (n != 57 || z != 56 || y != 57 || p != 57)
+					if (p1 < p2)
 					{
+						putchar(n);
+						putchar(z);
+						putchar(' ');
+						putchar(y);
+						putchar(p);
+							if (n == 57 && z == 56 && y == 57 && p == 57)
+							{
+								break;
+							}
 						putchar(',');
 						putchar(' ');
 					}
