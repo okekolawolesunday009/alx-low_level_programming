@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Resturn: prints number from 00 to 99
+ * Return: prints number from 00 to 99
  */
 
 int main(void)
