@@ -1,14 +1,34 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * print_last_digit- Entry point
+ * _abs - prints the absolute of a number
+ * @n: parameter used
  *
- * Return: suceeess
+ * Return: return the absolute value
  */
 
-int print_last_digit(int l){
-	int n;
+int _abs(int n)
+{
+	n = abs(n);
 
-	n = l % 10;
-	_putchar(n);
+	return (n);
+}
+/**
+ * print_last_digit - prints the last digit
+ * @c: parameter used
+ *
+ * Return: returns the last digit
+ */
+
+int print_last_digit(int c)
+{
+	int p;
+
+	c = _abs(c);
+	p = c % 10;
+
+	_putchar(p + '0');
+
+	return (p);
 }
