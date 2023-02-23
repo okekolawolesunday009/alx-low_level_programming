@@ -11,7 +11,9 @@ int main(void)
 	unsigned long int x, y, z;
 	int i;
 
-	x, y, z = 0;
+	x = 0;
+	y = 0;
+	z = 0;
 
 	for (i = 0; i < 1024; i++)
 	{
