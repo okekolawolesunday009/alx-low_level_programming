@@ -3,9 +3,9 @@
 
 /**
  * File: MAIN_H
- * Auth: Amos Mwongela
+ * Auth: oke kolawole sunday
  * Desc: Header file containing prototypes for all functions
- *       used in the 0x05-pointers_arrays_strings directory.
+ *       used in the 0x06-pointers_arrays_strings directory.
  */
 
 int _putchar(char c);
