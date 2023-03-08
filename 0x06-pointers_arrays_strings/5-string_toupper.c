@@ -2,15 +2,16 @@
 
 /**
  * string_toupper - convert all string to upper
+ * @s: char s
  * Return: always sucess
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	int i;
 
-	for (i = 0; s[i]!='\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if(s[i] >= 'a' && s[i] <= 'z')
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
 			s[i] = s[i] - 32;
 		}
