@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 
 int is_divided(int num, int div);
 int is_prime_number(int n);
@@ -32,7 +32,7 @@ int is_divided(int num, int div)
  * Return: if num is a prime
  */
 
-int is_prime_numbe(int n)
+int is_prime_number(int n)
 {
 	int div = 2;
 
