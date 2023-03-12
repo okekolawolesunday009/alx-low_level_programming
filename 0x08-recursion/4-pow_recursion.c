@@ -5,6 +5,7 @@
  * @x: int x
  * @y: int y
  *
+ * Return: recu
  */
 
 int _pow_recursion(int x, int y)
@@ -21,6 +22,6 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		return(result *= _pow_recursion(x, y - 1));
+		return (result *= _pow_recursion(x, y - 1));
 	}
 }
