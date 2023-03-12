@@ -5,19 +5,22 @@
 
 int main(int argc, char *argv[])
 {
-	int p, num, d;
+	int p, num;
+	unsigned d;
 
-	for (p = 0; p < argc; p++)
+	num = 0;
+
+	for (p = 1 ; p < argc; p++)
 	{
-		for (d = 0; argv[p][d]; d++)
+		for (d = 0; d < strlen(argv[p]); d++)
 		{
-			if (argv[num][d] < '0' || argv[num][d] > '9')
+			if (!isdigit(argv[p][d]))
 			{
 				printf("Error\n");
+				return (1);
 			}
 		}
-		num = atoi(argv[p]);
-		num += num;
+		num += atoi(argv[p]);
 	}
 	printf("%d\n", num);
 
