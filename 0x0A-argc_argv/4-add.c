@@ -3,10 +3,18 @@
 #include <ctype.h>
 #include <string.h>
 
+/**
+ * main - prints addtion of passed arg value
+ * @argc: arg count
+ * @argv: arg vslue
+ *
+ * Return: Always sucees
+ */
+
 int main(int argc, char *argv[])
 {
 	int p, num;
-	unsigned d;
+	unsigned int  d;
 
 	num = 0;
 
