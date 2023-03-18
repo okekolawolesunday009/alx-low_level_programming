@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include 
 
 /**
  * main - Entry point
+ * @i: parameter passed
  *
  * Description: prints all form of n
  * Return: Always 0 (suceess)
