@@ -2,9 +2,10 @@
 
 /**
  * int_index - sarches for an interger
- * @arrray: array
+ * @array: array
  * @size: size of the array
  * @cmp: comparator
+ * Return: prints the result of search
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -19,4 +20,4 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (i);
 	}
 	return (-1);
-}	
+}
