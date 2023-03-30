@@ -1,22 +1,17 @@
 #include <stdio.h>
-#include "variadic_functions.hi"
+#include "variadic_functions.h"
 #include <stdarg.h>
 
 /**
  */
 
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
-void print_all(const char * const format, ...);
 
 void print_char(va_list arg)
 {
 	char letter;
 	
 	letter = va_arg(arg, int);
-	printf("%s", letter);
+	printf("%c", letter);
 }
 
 void print_int(va_list arg)
@@ -24,7 +19,7 @@ void print_int(va_list arg)
 	int num;
 
 	num = va_arg(arg, int);
-	printf("%s", num);
+	printf("%d", num);
 }
 
 void print_float(va_list arg)
@@ -32,7 +27,7 @@ void print_float(va_list arg)
 	float num;
 
 	num = va_arg(arg, double);
-	printf("%s", num);
+	printf("%f", num);
 }
 
 void print_string(va_list arg)
@@ -53,7 +48,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0, j = 0;
-	char *separator = "";
+	char *separator= " ";
 	printer_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -84,4 +79,3 @@ void print_all(const char * const format, ...)
 
 	va_end(args);
 }
-
