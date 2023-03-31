@@ -2,9 +2,15 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+ * free_list - free memory
+ * @head: paramerter
+ */
+
 void free_list(list_t *head)
 {
 	list_t *temp;
+
 	while (head)
 	{
 		temp = head->next;
@@ -12,4 +18,4 @@ void free_list(list_t *head)
 		free(head);
 		head = temp;
 	}
-}	
+}
