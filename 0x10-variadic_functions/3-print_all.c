@@ -1,9 +1,9 @@
-#include <stdio.h>>
+#include <stdio.h>
 #include "variadic_functions.h"
 #include <stdarg.h>
 
 /**
- * print_cha - prints list of char
+ * print_char - prints list of char
  * @arg: arg is int
  *
  * Return: a character
@@ -29,7 +29,7 @@ void print_int(va_list arg)
 	int number;
 
 	number = va_arg(arg, int);
-	print("%d", number);
+	printf("%d", number);
 }
 
 /**
@@ -38,10 +38,10 @@ void print_int(va_list arg)
  * Return: always true
  */
 
-void print(va_list arg)
+void print_float(va_list arg)
 {
 	float number;
-	
+
 	number = va_arg(arg, double);
 	printf("%f", number);
 }
@@ -60,11 +60,18 @@ void print_string(va_list arg)
 	printf("%s", string);
 }
 
+/**
+ * print_all - prints all based on format
+ * @format: picks format
+ *
+ * Return: always the reesult of format
+ */
+
 void print_all(const char * const format, ...)
 {
 	va_list lists;
 	int i, j;
-	char separator;
+	char *separator  = ", ";
 
 	print_t defs[] = {
 		{"c", print_char},
@@ -82,13 +89,12 @@ void print_all(const char * const format, ...)
 			j++;
 		if (j < 4)
 		{
-			printf("%s", separator);
 			defs[j].print(lists);
-			separator = ", ";
+			printf("%s", separator);
 		}
 
 		i++;
 	}
 	printf("\n");
-	va_end(listss);
+	va_end(lists);
 }

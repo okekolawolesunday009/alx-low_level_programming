@@ -3,9 +3,9 @@
 
 #include <stdarg.h>
 
-typedef struct member
+typedef struct operations
 {
-	char *symbol;
+	char *identifier;
 	void (*print)(va_list lists);
 }print_t;
 int sum_them_all(const unsigned int n, ...);

@@ -3,8 +3,9 @@
 #include <ctype.h>
 
 /**
- * prin_strings - prints arrays of strings
+ * print_strings - prints arrays of strings
  * @separator: separator
+ * @n: array of n
  *
  * Return: list of array
  */
@@ -23,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nill)");
 		else
 			printf("%s", string);
-		if (index != (n - 1) && separator != NUL)
+		if (index != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	printf("\n");
