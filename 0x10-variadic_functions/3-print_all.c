@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 {
 	va_list lists;
 	int i, j;
-	char *separator  = ", ";
+	char *separator  = " ";
 
 	print_t defs[] = {
 		{"c", print_char},
@@ -90,10 +90,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4 && (*(format + i) != *(defs[j].identifier)))
 			j++;
-		if (j < 4)
+		if(j < 4)
 		{
-			defs[j].print(lists);
 			printf("%s", separator);
+			defs[j].print(lists);
+			separator = ", ";
 		}
 
 		i++;
