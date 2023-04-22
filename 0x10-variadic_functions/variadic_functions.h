@@ -3,6 +3,12 @@
 
 #include <stdarg.h>
 
+/**
+ * struct operations - struct
+ * @identifier: memnber
+ * @print: print
+ */
+
 typedef struct operations
 {
 	char *identifier;
