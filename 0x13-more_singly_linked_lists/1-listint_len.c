@@ -1,0 +1,24 @@
+#include "lists.h"
+#include <stdio.h>
+
+/**
+ * listint_len - prints the length of node
+ * @h: parameter passed
+ * Return: always node
+ */
+
+size_t listint_len(const listint_t *h)
+{
+	size_t node = 0;
+
+	while (h)
+	{
+		if (h == NULL)
+		{
+			return (1);
+		}
+		node++;
+		h = h->next;
+	}
+	return (node);
+}

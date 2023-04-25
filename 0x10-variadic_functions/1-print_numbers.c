@@ -3,26 +3,24 @@
 
 /**
  * print_numbers - prints array of num separated by comma
- * @separator: separator
- * @n: array of numbers
+ * @separator: sparator ","
+ * @n: array of n which is contstant
  *
- * Return: Always n with ','
+ * Return: lsit of array with comma
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list list;
-	unsigned int index;
+	va_list ap;
+	unsigned int i;
 
-	va_start(list, n);
-	for (index = 0; index < n; index++)
+	va_start(ap,  n);
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(list, int));
-		if (index != (n - 1) && separator != NULL)
-		{
+		printf("%d", va_arg(ap, int));
+		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
-		}
 	}
 	printf("\n");
-	va_end(list);
+	va_end(ap);
 }

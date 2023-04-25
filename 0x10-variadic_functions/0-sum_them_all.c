@@ -3,23 +3,29 @@
 #include <stdio.h>
 
 /**
- * sum_them_all - summs all the array
- * @n: araay of n passed
+ * sum_them_all - sum all d array
+ * @n: array of n
  *
- * Return: returns all sum of array
+ * Return: retuns sum
  */
 
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list list;
-	unsigned int index, sum;
+	va_list ap;
+	unsigned int i, sum;
 
 	sum = 0;
-	va_start(list, n);
+	va_start(ap, n);
 	if (n == 0)
+	{
 		return (0);
-	for (index = 0; index < n; index++)
-		sum += va_arg(list, int);
-	va_end(list);
+	}
+
+
+	for (i = 0; i < n; i++)
+	{
+		sum += va_arg(ap, int);
+	}
+	va_end(ap);
 	return (sum);
 }

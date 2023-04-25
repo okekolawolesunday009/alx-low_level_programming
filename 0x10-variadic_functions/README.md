@@ -1,1 +1,1 @@
-#varaidic.f
+£variadic function

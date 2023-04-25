@@ -3,17 +3,11 @@
 
 #include <stdarg.h>
 
-/**
- * struct operations - struct
- * @identifier: memnber
- * @print: print
- */
-
-typedef struct operations
+typedef struct member
 {
-	char *identifier;
-	void (*print)(va_list lists);
-} print_t;
+	char *symbol;
+	void (*print)(va_list args);
+}printer_t;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
@@ -24,3 +18,4 @@ void print_float(va_list arg);
 void print_string(va_list arg);
 
 #endif
+
