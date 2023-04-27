@@ -1,10 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
  * free_list - free memory
- * @head: paramerter
+ * @head: parameter
  */
 
 void free_list(list_t *head)

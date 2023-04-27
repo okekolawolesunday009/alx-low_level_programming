@@ -1,24 +1,21 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * list_len - list the number of element
- * @h: parameter used
+ * list_len - list the number element in the list
+ * @h: parameter passed
  *
  * Return: number of element
  */
 
 size_t list_len(const list_t *h)
 {
-	int count;
+	int kount;
 
-	count = 0;
-
+	kount = 0;
 	while (h)
 	{
-		count++;
-		h = h->next;
+		kount++;
+		h= h->next;
 	}
-	return (count);
+	return (kount);
 }

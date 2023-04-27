@@ -1,28 +1,24 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * print_list - print all
- * @h: type def of list_s
+ * print_list - print list
+ * @h: type def of list_t
  *
- * Return: return count
+ * Return: reyturn count
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;
-
+	size_t kount = 0;
+	
 	while (h)
 	{
 		if (h->str == NULL)
-			printf("[0] (nil)\n");
+			printf("[0] (Nil)\n");
 		else
-		{
 			printf("[%d] %s\n", h->len, h->str);
-		}
-		count++;
+		kount++;
 		h = h->next;
 	}
-	return (count);
+	return (kount);
 }
