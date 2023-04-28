@@ -5,8 +5,7 @@ oAh, 00
 section .text
 	global main
 	extern printf
-
-main: 
+main:
 	push rbp
 	mov rbp, rsp
 
