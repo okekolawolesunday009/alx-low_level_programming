@@ -1,6 +1,11 @@
 #include "lists.h"
 
-void free_listint2(listint _**head)
+/**
+ * free_listint2 - frees head
+ * @head: head
+ */
+
+void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
 	listint_t *current;

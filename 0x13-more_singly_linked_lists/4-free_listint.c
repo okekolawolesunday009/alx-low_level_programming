@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * free_list - free memory
+ * free_listint - free memory
  * @head: pointer to head node
  */
 
-void free_list(listint_t *head)
+void free_listint(listint_t *head)
 {
 	listint_t *tmp;
 
