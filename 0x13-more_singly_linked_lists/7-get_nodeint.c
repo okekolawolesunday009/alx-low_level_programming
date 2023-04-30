@@ -8,7 +8,7 @@
  * Return: return the value or null if nothing
  */
 
-listint_t *getnodeint_at_index(listint_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int kount;
 	listint_t *curr;
@@ -16,7 +16,7 @@ listint_t *getnodeint_at_index(listint_t *head, unsigned int index)
 	curr = malloc(sizeof(listint_t));
 	curr = head;
 	kount = 0;
-	
+	/**betty**/
 	while (curr != NULL)
 	{
 		if (kount == index)

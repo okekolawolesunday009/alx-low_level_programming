@@ -1,6 +1,12 @@
 #include "lists.h"
 
-int pop_listint(listint **head)
+/**
+ * pop_listint - delete the index of node
+ * @head: parameter
+ * Return: success
+ */
+
+int pop_listint(listint_t **head)
 {
 	listint_t *nw, *update;
 
@@ -10,6 +16,6 @@ int pop_listint(listint **head)
 		return (0);
 	nw = update = *head;
 	*head = update->next;
-	free(new);
+	free(nw);
 	return (1);
 }
