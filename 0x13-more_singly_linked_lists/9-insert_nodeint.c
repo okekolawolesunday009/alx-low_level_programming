@@ -8,7 +8,7 @@
  * Return: return new node list
  */
 
-listint_t *insert_nodeint_at_inde(listint **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i;
 	listint_t *nw, *update;
@@ -20,12 +20,11 @@ listint_t *insert_nodeint_at_inde(listint **head, unsigned int idx, int n)
 	nw->n = n;
 	update = *head;
 
-	for (i = 0; i < idx && current != NULL; i++)
+	for (i = 0; i < idx && update != NULL; i++)
 		update = update->next;
 	if (update == NULL)
 		return (NULL);
 	nw->next = update->next;
 	update->next = nw;
-	return (new);
+	return (nw);
 }
-`
