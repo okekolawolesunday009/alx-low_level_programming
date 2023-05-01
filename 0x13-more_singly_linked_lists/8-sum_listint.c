@@ -12,14 +12,14 @@ int sum_listint(listint_t *head)
 	listint_t *curr;
 
 	sum = 0;
-	cur = malloc(sizeof(listint_t));
+	curr = malloc(sizeof(listint_t));
 
 	if (head == NULL)
 		return (0);
 	curr = head;
 	while (curr != NULL)
 	{
-		sum += curr``->n;
+		sum += curr->n;
 		curr = curr->next;
 	}
 	return (sum);
