@@ -6,13 +6,13 @@ int append_text_to_file(const char *filename, char *text_content)
 
         if (filename == NULL)
                 return (-1);
-        if (textcontent != NULL)
+        if (text_content != NULL)
         {
                 for (; text_content[l];)
-                        len++;
+                        l++;
         }
         o = open(filename, O_WRONLY | O_APPEND);
-        w = write(fd, text_content, len);
+        w = write(o, text_content, l);
         if (o == -1 || w == -1)
                 return (-1);
         close(o);
