@@ -3,6 +3,8 @@
 /**
  * clear_bit - clearss bit to zero
  * @n: parameter n
+ * @index: index number
+ *
  * Return: correct output
  */
  
