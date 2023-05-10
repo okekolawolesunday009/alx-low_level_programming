@@ -9,9 +9,11 @@
 
 void print_binary(unsigned long int n)
 {
-	int i,flag, size = sizeof(unsigned long int) * 8;
-       	char *binary = malloc(size + 1);
+	int i, flag, size = sizeof(unsigned long int) * 8;
+	char *binary = malloc(size + 1);
+
 	binary[size] = '\0';
+
 	if (binary == NULL)
 		return;
 
@@ -29,7 +31,6 @@ void print_binary(unsigned long int n)
 			binary[i] = (n & 1) ? '1' : '0';
 			n >>= 1;
 		}
-		
 	}
 	for (i = 0; i < size; i++)
 	{
