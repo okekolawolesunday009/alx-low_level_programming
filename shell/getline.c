@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char** argv[]) 
+int main(int argc, char* argv[]) 
 {
-    char *line = NULL;
+	FILE *fp;
+	char *line = NULL;
     size_t len = 0;
     ssize_t nread;
+    fp = fopen(argv[1], "r");
 
     if (fp == NULL) {
         perror("fopen");
@@ -16,7 +18,6 @@ int main(int argc, char** argv[])
                fprintf(stderr, "Usage: %s <file>\n", argv[0]);
                exit(EXIT_FAILURE);
     }
-    FILE *fp = fopen(argv[1], "r");
      if (fp == NULL)
      {
         perror("fopen");
