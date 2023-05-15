@@ -6,7 +6,8 @@ void prompt(char **ac, char **env)
 	size_t input_size = 0;
 	pid_t pid;
 	int new_result, i;
-	char *args, *token;
+	char *args[256], *token;
+	(void)ac;
 
 	while (1)
 	{
@@ -23,11 +24,10 @@ void prompt(char **ac, char **env)
 		input[strcspn(input, "\n")] = '\0';
 
 		pid = fork();
-		argv[0] = 
 		if (pid == -1)
 		{
 			printf("failed fork\n");
-			return (1);
+			exit(EXIT_FAILURE);
 		}
 		else if (pid == 0)
 		{
@@ -37,14 +37,14 @@ void prompt(char **ac, char **env)
 			{
 				args[i] = token;
 				i++;
-				token = strok(NULL, " ");
+				token = strtok(NULL, " ");
 			}
 			args[i] = NULL;
 
 			execve(args[0], args, env);
 
 			printf("failed if cmd fails\n");
-			return (1);
+			exit(EXIT_FAILURE);
 		}
 		else 
 		{
@@ -52,7 +52,6 @@ void prompt(char **ac, char **env)
 			waitpid(pid, &status, 0);
 		}
 	}
-	free(line);
+	free(input);
 
-    return 0;
 }

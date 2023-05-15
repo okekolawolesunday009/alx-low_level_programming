@@ -1,7 +1,8 @@
 #include "main.h"
 
-int main(int ac, char *av, char *env)
+int main(int ac, char **av, char **env)
 {
-	prompt(av, env);
+	if (ac == 1)
+		prompt(av, env);
 	return (0);
 }
