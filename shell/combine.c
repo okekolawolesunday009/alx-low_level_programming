@@ -16,10 +16,7 @@ int main(void)
     printf("welcome to our shell program :) :)\n");
 
     while ((input = readline("root/user/kolawoleAlxShell$ ")) != NULL) {
-        if (strcmp(input, "ls -l /tmp") == 0) {
-            argv[0] = "ls";
-            argv[1] = "-l";
-            argv[2] = "/tmp";
+        if (strcmp(input, "/bin/ls") == 0) {
 	    char *ls_argv[] = {"/bin/ls", NULL};
             child_pid = fork();
             if (child_pid == 0) {
@@ -46,7 +43,7 @@ int main(void)
             free(input);
             exit(EXIT_SUCCESS);
         } else {
-            printf("Unknown command: %s\n", input);
+            printf("No such file in directory\n");
         }
 
         free(input);
