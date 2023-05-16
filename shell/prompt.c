@@ -22,6 +22,11 @@ void prompt(char **ac, char **env)
 			exit(EXIT_FAILURE);
 		}
 		input[strcspn(input, "\n")] = '\0';
+		 if (strcmp(input, "exit") == 0)
+		 {
+			 free(input);
+			 exit(EXIT_SUCCESS);
+		 }
 
 		pid = fork();
 		if (pid == -1)
@@ -43,7 +48,7 @@ void prompt(char **ac, char **env)
 
 			execve(args[0], args, env);
 
-			printf("failed if cmd fails\n");
+			printf("%s: Not found\n", args[0]);
 			exit(EXIT_FAILURE);
 		}
 		else 
