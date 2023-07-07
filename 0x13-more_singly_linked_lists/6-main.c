@@ -2,6 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include "3-add_nodeint_end.c"
+#include "0-print_listint.c"
+#include "6-pop_listint.c"
+#include "5-free_listint2.c"
 
 /**
  * main - check the code
