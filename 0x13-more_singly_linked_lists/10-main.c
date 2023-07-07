@@ -2,6 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include "3-add_nodeint_end.c"
+#include "0-print_listint.c"
+#include "5-free_listint2.c"
+#include "10-delete_nodeint.c"
 
 /**
  * main - check the code
@@ -23,46 +27,9 @@ int main(void)
     add_nodeint_end(&head, 1024);
     print_listint(head);
     printf("-----------------\n");
-    delete_nodeint_at_index(&head, 5);
-    print_listint(head);
-    printf("-----------------\n");
     delete_nodeint_at_index(&head, 0);
     print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&head, 0);
-    print_listint(head);
+
+     printf("-----------------\n");
     return (0);
 }

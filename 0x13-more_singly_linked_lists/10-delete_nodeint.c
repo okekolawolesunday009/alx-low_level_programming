@@ -1,10 +1,11 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * delete_nodeint_at_index - add new node at specific position
+ * delete_nodeint_at_index - delete node at specific position
  * @head: parameter
- * @index: position to the new node
- * Return: return the new list with the addition
+ * @index: position of the node to delete
+ * Return: the modified list or NULL on failure
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -12,31 +13,37 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int i;
 	listint_t *prev, *update;
 
-	update = malloc(sizeof(listint_t));
-
-	prev = NULL;
+	prev = *head;
 	update = *head;
 
-	if (update == NULL || index == 0)
+	if (*head == NULL)
+        return NULL;
+
+	else if (update == NULL || index == 0)
 	{
-		if (update != NULL)
-			*head = (*head)->next;
+        *head = (*head)->next;
 		free(update);
-		return (1);
+		update = NULL;
+		return (*head);
 	}
-	i = 0;
-	for (; i < index && update != NULL; i++)
-	{
-		prev = update;
-		update = update->next;
+	else
+    {
+        for (i = 0; i < index && update != NULL; i++)
+        {
+            prev = update;
+            update = update->next;
+        }
+
+        if (update == NULL)
+            return NULL;
+
+        prev->next = update->next;
+        free(update);
+        update = NULL;
+        return (*head);
 	}
-	if (update == NULL)
-	{
-		return (-1);
-	}
-	if (prev == NULL)
-		*head = update->next;
-	prev->next = update->next;
-	free(update);
-	return (1);
+
+	return NULL;
 }
+
+
