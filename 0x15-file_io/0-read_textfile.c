@@ -4,6 +4,13 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+/** 
+ * read_textfile - reads a text file and prints it to th SO
+ * @filename: the file to be read
+ * @letters: number of letters 
+ * Return: thhe number of letters reead and printed
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t w, r, o;
@@ -19,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	if (charMemory == NULL)
 		return (0);
-	free(charMemory);
 	close(o);
+	free(charMemory);
 	return (w);
 }
