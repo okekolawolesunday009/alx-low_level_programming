@@ -3,7 +3,7 @@
 /**
  * create_file - creats a file
  * @filename: file name
- * @text_content: text content
+ * @text-content: text content
  * Return: always 1
  */
 
