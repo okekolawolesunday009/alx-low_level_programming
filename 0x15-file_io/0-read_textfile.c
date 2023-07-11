@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t w, r, o;
@@ -14,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	if (o == -1)
+	if (o == -1 || r == -1)
 		return (0);
 	if (charMemory == NULL)
 		return (0);
