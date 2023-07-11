@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * create_file - creats a file
+ * @filename: file name
+ * @text-content: text content
+ * Return: always 1
+ */
+
 int create_file(const char *filename, char *text_content)
 {
 	int o, w, l = 0;
