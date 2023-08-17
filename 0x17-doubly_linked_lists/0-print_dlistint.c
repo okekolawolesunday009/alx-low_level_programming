@@ -9,11 +9,11 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h)
 	{
-		if (h->n == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%lu] %d\n", kount, h->n);
+		if (h == NULL)
+			return (1);
+	    printf("%d\n", h->n);
             kount++;
             h = h->next;
 	}
 	return (kount);
+}

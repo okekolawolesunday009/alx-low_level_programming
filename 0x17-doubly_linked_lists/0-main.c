@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include "lists.h"
 #include <stddef.h>
-#include "0-print_dlistint.c"
 
 /**
  * main - check the code
