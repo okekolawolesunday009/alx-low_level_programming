@@ -1,18 +1,18 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - get the index of a node
+ * get_dnodeint_at_index - get the index of a node
  * @head: pointer to head
  * @index: position of element
  *
  * Return: return the value or null if nothing
  */
 
-dlistint_t *get_dnodeint_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	size_t kount;
 	dlistint_t *curr;
-
+	/**code**/
 	curr = malloc(sizeof(dlistint_t));
 	curr = head;
 	kount = 0;
