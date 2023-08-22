@@ -7,7 +7,7 @@
  * Description: print _putchar
  * Return: On success 1.
  */
-int imain(void)
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
