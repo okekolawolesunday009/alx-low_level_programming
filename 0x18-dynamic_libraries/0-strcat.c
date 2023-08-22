@@ -1,24 +1,4 @@
 #include "main.h"
-
-/**
- * _strlen - checks lenghth of string
- * @str: char str
- *
- * Return: Alwasy success
- */
-
-int _strlen(char *str)
-{
-	int l = 0;
-
-	while(*str)
-	{
-		str++;
-		l++;
-	}
-	return (l);
-}
-
 /**
  * _strcat -concats two strings
  * @dest: char destination
