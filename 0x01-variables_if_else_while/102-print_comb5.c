@@ -10,27 +10,27 @@ int main(void)
 {
 	int p, y, z, n, p1, p2;
 	/**comment**/
-	for (n = 48; n <= 57; n++)
+	for (n = 0; n <= 97; n++)
 	{
-		for (z = 48; z <= 56; z++)
+		for (z = 0; z <= 98; z++)
 		{
-			for (y = 48; y <= 57; y++)
+			for (y = 0; y <= 99; y++)
 			{
-				for (p = 48; p <= 57; p++)
+				for (p = 0; p <= 99; p++)
 				{
 					p1 = (n * 10) + z;
 					p2 = (y * 10) + p;
 
-					if (p1 < p2)
+					if (p1 > p2)
 					{
-						putchar(n);
-						putchar(z);
+						putchar((n % 10) + '0');
+						putchar((z % 10) + '0');
 						putchar(' ');
-						putchar(y);
-						putchar(p);
-							if (n == 57 && z == 56 && y == 57 && p == 57)
+						putchar((y % 10) + '0');
+						putchar((p % 10) + '0');
+							if (n == 96 && z == 97 && y == 99 && p == 99)
 							{
-								break;
+								continue;
 							}
 						putchar(',');
 						putchar(' ');
