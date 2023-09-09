@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     unsigned int index;
     hash_node_t *current, *new_item;
     
-    index = hash(key) % ht->size;
+    index = hash_djb2(key) % ht->size;
     new_item = (hash_node_t *)malloc(sizeof(hash_node_t));
     
     if (!new_item)
