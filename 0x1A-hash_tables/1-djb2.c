@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * hash_djb2 - Entry point
+ *
+ * @str: string to hash
+ * Description: hash function
+ * Return: returns a hash function
+ */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
     unsigned long int hash;
@@ -14,16 +22,4 @@ unsigned long int hash_djb2(const unsigned char *str)
         hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
     }
     return (hash);
-}
-int main(void)
-{
-    char *s;
-
-    s = "cisfun";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    s = "Don't forget to tweet today";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    s = "98";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    return (EXIT_SUCCESS);
 }

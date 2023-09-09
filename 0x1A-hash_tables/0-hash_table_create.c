@@ -5,12 +5,10 @@
 /**
  * hash_table_create - Entry point
  *
- * size: size of table
+ * @size: size of table
  * Description: prints the the size of the table
  * Return: 0 (always success)
  */
-
-
 hash_table_t *hash_table_create(unsigned long int size)
 {
     unsigned int i;
