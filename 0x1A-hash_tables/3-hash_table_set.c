@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "hash_tables.h"
+#include <string.h>
 #include <stdlib.h>
 /**
  * init_dog - initializes variable type of dog
@@ -13,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     unsigned int index;
     hash_node_t *current, *new_item;
     
-    index = hash_djb2(key) % ht->size;
+    index = hash_djb2((const unsigned char *)key) % ht->size;
     new_item = (hash_node_t *)malloc(sizeof(hash_node_t));
     
     if (!new_item)
@@ -23,6 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     }
     new_item->key = strdup(key);
     new_item->value = strdup(value);
+    new_item->next = NULL;
     
     if (ht->array[index] == NULL)
     {
