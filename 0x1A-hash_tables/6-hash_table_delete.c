@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * hash_table_print -  prints the key and value in the table
+ * hash_table_delete -  deletes in the table
  * @ht: poitner to head
  */
-hash_table_delete(const hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
     hash_node_t *temp;
     if (ht == NULL) {

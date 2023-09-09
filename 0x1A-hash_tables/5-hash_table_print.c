@@ -13,14 +13,18 @@ void hash_table_print(const hash_table_t *ht)
     unsigned long int i;
     hash_node_t *current;
 
-    if (ht == NULL || ht->array == NULL) {
-        return; // Handle invalid input or empty hash table
+    if (ht == NULL || ht->array == NULL)
+    {
+         printf("{}");
+         return ; 
     }
 
-    for ( i = 0; i < ht->size; i++) {
-        current = ht->array[i];
-        while (current != NULL) {
-            printf("'%s': '%s'", current->key, current->value);
+    for ( i = 0; i < ht->size; i++)
+    {
+        current = ht->array[i];          
+        while (current != NULL) 
+        {
+            printf("{'%s': '%s'}", current->key, current->value);
             current = current->next;
             if (current != NULL) {
                 printf(", ");
