@@ -8,21 +8,23 @@
  * Return: returns the element to be searched
  */
 
-int binary_search(int *array, size_t size, int value) {
+int binary_search(int *array, size_t size, int value)
+{
 	int h, l, m, i;
+
 	h = 0;
 	l = size - 1;
-	
 	if ((!value) || array == NULL)
 		return (-1);
-	while (h <= l) {
+	while (h <= l)
+	{
 		m = (h + l) / 2;
 		printf("Searching in array: ");
-		for (i = h; i <= l; ++i) {
+		for (i = h; i <= l; ++i)
+		{
 			printf("%d", array[i]);
-			if (i < l) {
+			if (i < l)
 				printf(", ");
-			}
 		}
 		printf("\n");
 		if (array[m] == value)

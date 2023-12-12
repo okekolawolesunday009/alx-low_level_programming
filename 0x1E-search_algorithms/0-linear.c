@@ -6,7 +6,8 @@
  * @value: dtata to be search
  * Return: the element searched for
  */
-int linear_search(int *array, size_t size, int value){
+int linear_search(int *array, size_t size, int value)
+{
 	size_t i;
 
 	if (!value)
